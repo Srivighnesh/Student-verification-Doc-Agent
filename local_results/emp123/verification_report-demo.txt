@@ -1,0 +1,36 @@
+DOCUMENTS REVIEWED
+- Previous vs New: prev/emp123/auto/AdharCard_b64.txt ↔ to-verify/emp123/auto/AdharCard_b64.txt (record key: id)
+- Previous vs New: prev/emp123/auto/Pancard_b64.txt ↔ to-verify/emp123/auto/Pancard_b64.txt (record key: id_2)
+
+MATCHES
+- AdharCard_b64.txt (id)
+  - DocumentNumber: JFNPM7816F ↔ JFNPM7816F (match)
+  - FirstName: PAVAN KRUSHNA ↔ PAVAN KRUSHNA (match)
+  - LastName: MOTE ↔ MOTE (match)
+  - DateOfBirth: 05/07/2008 ↔ 05/07/2008 (match)
+- Pancard_b64.txt (id_2)
+  - DocumentNumber: 9522 4107 1384 ↔ 9522 4107 1384 (match)
+  - FirstName: Teena ↔ Teena (match)
+  - LastName: Nagar ↔ Nagar (match)
+  - DateOfBirth: 08/01/2002 ↔ 08/01/2002 (match)
+  - Address: D/O Roop Nagar, naharganj mohalla, .,
+    Kumher, Bharatpur,
+    Rajasthan - 321201 ↔ same (match)
+
+DISCREPANCIES
+- No mismatches between previous and new versions for any field.
+- Cross-document identity conflict (within both previous and new sets):
+  - Names differ: AdharCard shows “PAVAN KRUSHNA MOTE”; Pancard shows “Teena Nagar”.
+  - Dates of birth differ: AdharCard 05/07/2008; Pancard 08/01/2002.
+- Document number format observation (potential mislabeling):
+  - AdharCard_b64.txt contains an alphanumeric ID “JFNPM7816F” (pattern consistent with a PAN number).
+  - Pancard_b64.txt contains a 12-digit number “9522 4107 1384” (pattern consistent with an Aadhaar number).
+  - This pattern suggests the two files may be labeled under the opposite document types. This is an observation; underlying data was compared as provided.
+
+MISSING ITEMS
+- No missing fields detected in the provided records. All listed fields have values.
+
+SUMMARY
+- All new documents exactly match the corresponding previous documents field-by-field.
+- There are no new-to-previous conflicts or missing values.
+- The set contains a strong cross-document identity inconsistency (names and dates of birth differ) and possible mislabeling based on document number formats. Recommend manual review/verification of document types and employee identity linkage.

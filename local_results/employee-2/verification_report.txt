@@ -1,0 +1,38 @@
+DOCUMENTS REVIEWED
+- Previous: prev / employee-2/auto/emp002adhar.jpeg.base64.txt (document key: id)
+- New: to-verify / employee-2/auto/emp002adhar.jpeg.base64.txt (document key: id)
+
+MATCHES
+Matched record (by DocumentNumber + Name + DateOfBirth):
+- DocumentNumber: 5522 6616 4533 ↔ 5522 6616 4533
+- FirstName: Roshan ↔ Roshan
+- LastName: Pandey ↔ Pandey
+- DateOfBirth: 03/01/1995 ↔ 03/01/1995
+- Address: 
+  ADARSH NAGAR,
+  SAGARPALI, Sagarpali,
+  277506
+  Sagarpali, Ballia, Uttar
+  Pradesh, 277506
+  ↔
+  ADARSH NAGAR,
+  SAGARPALI, Sagarpali,
+  277506
+  Sagarpali, Ballia, Uttar
+  Pradesh, 277506
+
+DISCREPANCIES
+- None found. All compared fields match exactly.
+
+MISSING ITEMS
+- No fields missing in the matched records.
+- No new documents without a corresponding previous record.
+- No previous documents without a corresponding new record.
+
+SUMMARY
+- Total previous documents: 1
+- Total new documents: 1
+- Matched: 1
+- Conflicts: 0
+- Missing/Unmatched: 0
+All values in the new document for employee-2 are consistent with the previous document.

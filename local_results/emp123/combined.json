@@ -1,0 +1,117 @@
+{
+  "employee_id": "emp123",
+  "documents": {
+    "baseline": {
+      "id": {
+        "source_container": "prev",
+        "source_file": "emp123/auto/AdharCard_b64.txt",
+        "fields": {
+          "DateOfBirth": {
+            "value": "05/07/2008",
+            "confidence": 0.828
+          },
+          "DocumentNumber": {
+            "value": "JFNPM7816F",
+            "confidence": 0.893
+          },
+          "FirstName": {
+            "value": "PAVAN KRUSHNA",
+            "confidence": 0.847
+          },
+          "LastName": {
+            "value": "MOTE",
+            "confidence": 0.794
+          }
+        }
+      },
+      "id_2": {
+        "source_container": "prev",
+        "source_file": "emp123/auto/Pancard_b64.txt",
+        "fields": {
+          "Address": {
+            "value": "D/O Roop Nagar, naharganj mohalla, .,\nKumher, Bharatpur,\nRajasthan - 321201",
+            "confidence": 0.303
+          },
+          "DateOfBirth": {
+            "value": "08/01/2002",
+            "confidence": 0.729
+          },
+          "DocumentNumber": {
+            "value": "9522 4107 1384",
+            "confidence": 0.701
+          },
+          "FirstName": {
+            "value": "Teena",
+            "confidence": 0.696
+          },
+          "LastName": {
+            "value": "Nagar",
+            "confidence": 0.682
+          }
+        }
+      }
+    },
+    "verification": {
+      "id": {
+        "source_container": "to-verify",
+        "source_file": "emp123/auto/AdharCard_b64.txt",
+        "fields": {
+          "DateOfBirth": {
+            "value": "05/07/2008",
+            "confidence": 0.828
+          },
+          "DocumentNumber": {
+            "value": "JFNPM7816F",
+            "confidence": 0.893
+          },
+          "FirstName": {
+            "value": "PAVAN KRUSHNA",
+            "confidence": 0.847
+          },
+          "LastName": {
+            "value": "MOTE",
+            "confidence": 0.794
+          }
+        }
+      },
+      "id_2": {
+        "source_container": "to-verify",
+        "source_file": "emp123/auto/Pancard_b64.txt",
+        "fields": {
+          "Address": {
+            "value": "D/O Roop Nagar, naharganj mohalla, .,\nKumher, Bharatpur,\nRajasthan - 321201",
+            "confidence": 0.303
+          },
+          "DateOfBirth": {
+            "value": "08/01/2002",
+            "confidence": 0.729
+          },
+          "DocumentNumber": {
+            "value": "9522 4107 1384",
+            "confidence": 0.701
+          },
+          "FirstName": {
+            "value": "Teena",
+            "confidence": 0.696
+          },
+          "LastName": {
+            "value": "Nagar",
+            "confidence": 0.682
+          }
+        }
+      }
+    }
+  },
+  "last_run_ids": {
+    "baseline": "cb9d1c3659b94debbb2c454dfdecd69e",
+    "verification": "cb9d1c3659b94debbb2c454dfdecd69e"
+  },
+  "errors": {
+    "baseline": [],
+    "verification": []
+  },
+  "source_containers": {
+    "baseline": "prev",
+    "verification": "to-verify"
+  }
+}

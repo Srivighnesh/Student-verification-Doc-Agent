@@ -1,0 +1,38 @@
+DOCUMENTS REVIEWED
+- Previous: prev/emp123/auto/AdharCard_b64.txt ↔ New: to-verify/emp123/auto/AdharCard_b64.txt (record id)
+- Previous: prev/emp123/auto/Pancard_b64.txt ↔ New: to-verify/emp123/auto/Pancard_b64.txt (record id_2)
+
+MATCHES
+- Record id (AdharCard_b64.txt):
+  - DocumentNumber: JFNPM7816F ↔ JFNPM7816F (match)
+  - FirstName: PAVAN KRUSHNA ↔ PAVAN KRUSHNA (match)
+  - LastName: MOTE ↔ MOTE (match)
+  - DateOfBirth: 05/07/2008 ↔ 05/07/2008 (match)
+
+- Record id_2 (Pancard_b64.txt):
+  - DocumentNumber: 9522 4107 1384 ↔ 9522 4107 1384 (match)
+  - FirstName: Teena ↔ Teena (match)
+  - LastName: Nagar ↔ Nagar (match)
+  - DateOfBirth: 08/01/2002 ↔ 08/01/2002 (match)
+  - Address: 
+    D/O Roop Nagar, naharganj mohalla, .,
+    Kumher, Bharatpur,
+    Rajasthan - 321201
+    ↔
+    D/O Roop Nagar, naharganj mohalla, .,
+    Kumher, Bharatpur,
+    Rajasthan - 321201
+    (match)
+
+DISCREPANCIES
+- None found between new and corresponding previous records.
+
+MISSING ITEMS
+- No fields missing in the new records compared to their corresponding previous records.
+- No new documents without a corresponding previous reference.
+- No previous documents lacking a new counterpart.
+
+SUMMARY
+- 2/2 documents successfully matched to previous references.
+- All compared fields match exactly; no conflicts detected.
+- No missing values or unmatched documents.

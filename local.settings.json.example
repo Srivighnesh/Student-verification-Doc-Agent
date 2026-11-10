@@ -1,0 +1,13 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "python",
+    "AzureWebJobsStorage": "<storage connection string>",
+    "StorageConnection": "<storage connection string for the documents>",
+    "ServiceBusConnection__fullyQualifiedNamespace": "<namespace>.servicebus.windows.net",
+    "DI_ENDPOINT": "https://<name>.cognitiveservices.azure.com/",
+    "DI_KEY": "<document intelligence key>",
+    "DI_CLASSIFIER_ID": "<custom classifier id>",
+    "SSC_MEMO_MODEL": "<custom extraction model id or prebuilt-layout>"
+  }
+}

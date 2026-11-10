@@ -1,0 +1,26 @@
+DOCUMENTS REVIEWED
+- Previous document: prev / employee-3/auto/emp003adhar.jpeg.base64.txt (type: id)
+- New document: to-verify / employee-3/auto/emp003adhar.jpeg.base64.txt (type: id)
+
+MATCHES
+- Matched document pair: id
+  - DocumentNumber: 8862 7634 9503 — match
+  - FirstName: Md — match
+  - LastName: Tasuwar — match
+  - DateOfBirth: 01/01/1999 — match
+  - Address: s/o,Takseer Baluwa ward no 09; kursail Araria kursail Bihar 854329; www — match
+
+DISCREPANCIES
+- None found.
+
+MISSING ITEMS
+- No fields present in one version and missing in the other.
+- No new documents without a corresponding previous document.
+- No previous documents without a corresponding new document.
+
+SUMMARY
+- Documents compared: 1 pair
+- Fields compared: 5
+- Matches: 5
+- Discrepancies: 0
+- Missing items: 0

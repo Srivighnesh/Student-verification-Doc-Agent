@@ -1,0 +1,73 @@
+{
+  "employee_id": "employee-2",
+  "documents": {
+    "baseline": {
+      "id": {
+        "source_container": "prev",
+        "source_file": "employee-2/auto/emp002adhar.jpeg.base64.txt",
+        "fields": {
+          "Address": {
+            "value": "ADARSH NAGAR,\nSAGARPALI, Sagarpali,\n277506\nSagarpali, Ballia, Uttar\nPradesh, 277506",
+            "confidence": 0.471
+          },
+          "DateOfBirth": {
+            "value": "03/01/1995",
+            "confidence": 0.776
+          },
+          "DocumentNumber": {
+            "value": "5522 6616 4533",
+            "confidence": 0.484
+          },
+          "FirstName": {
+            "value": "Roshan",
+            "confidence": 0.739
+          },
+          "LastName": {
+            "value": "Pandey",
+            "confidence": 0.671
+          }
+        }
+      }
+    },
+    "verification": {
+      "id": {
+        "source_container": "to-verify",
+        "source_file": "employee-2/auto/emp002adhar.jpeg.base64.txt",
+        "fields": {
+          "Address": {
+            "value": "ADARSH NAGAR,\nSAGARPALI, Sagarpali,\n277506\nSagarpali, Ballia, Uttar\nPradesh, 277506",
+            "confidence": 0.471
+          },
+          "DateOfBirth": {
+            "value": "03/01/1995",
+            "confidence": 0.776
+          },
+          "DocumentNumber": {
+            "value": "5522 6616 4533",
+            "confidence": 0.484
+          },
+          "FirstName": {
+            "value": "Roshan",
+            "confidence": 0.739
+          },
+          "LastName": {
+            "value": "Pandey",
+            "confidence": 0.671
+          }
+        }
+      }
+    }
+  },
+  "last_run_ids": {
+    "baseline": "e861cd0c7a31490595305be519f72224",
+    "verification": "e861cd0c7a31490595305be519f72224"
+  },
+  "errors": {
+    "baseline": [],
+    "verification": []
+  },
+  "source_containers": {
+    "baseline": "prev",
+    "verification": "to-verify"
+  }
+}
