@@ -9,5 +9,6 @@
     "DI_KEY": "<document intelligence key>",
     "DI_CLASSIFIER_ID": "<custom classifier id>",
     "SSC_MEMO_MODEL": "<custom extraction model id or prebuilt-layout>"
-  }
+    "FOUNDRY_Agent_Name": "DI-OCR-KR",
+    "FOUNDRY_PROJECT_ENDPOINT": <Foundary_endpoint>
 }

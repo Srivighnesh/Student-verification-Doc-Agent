@@ -21,7 +21,6 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
-
 UPLOAD_URL = os.environ.get(
     "UPLOAD_URL",
     "http://localhost:7071/api/upload",
@@ -93,7 +92,8 @@ def main() -> int:
         upload_name = relative_name.replace("/", "__")
         doc_type = infer_doc_type(path, root_folder)
 
-        encoded = base64.b64encode(path.read_bytes()).decode("ascii")
+        raw_data = path.read_bytes()
+        encoded = base64.b64encode(raw_data).decode("ascii")
 
         files.append({
             # Keep nested folder paths out of file_name; preserve uniqueness
@@ -103,11 +103,12 @@ def main() -> int:
             "file_base64": encoded,
         })
 
-    payload = json.dumps({
+    upload_body = {
         "employee_id": employee_id,
         "kind": kind,
         "files": files,
-    }).encode("utf-8")
+    }
+    payload = json.dumps(upload_body).encode("utf-8")
 
     headers = {"Content-Type": "application/json"}
     if FUNCTION_KEY:
@@ -123,9 +124,20 @@ def main() -> int:
     try:
         with urllib.request.urlopen(request, timeout=300) as response:
             print(response.read().decode("utf-8"))
+        print(f"Summary: sent {len(files)} file(s)")
         return 0
     except urllib.error.HTTPError as error:
-        print(f"HTTP {error.code}: {error.read().decode('utf-8')}")
+        body = error.read().decode("utf-8")
+        try:
+            result = json.loads(body)
+            if isinstance(result.get("details"), list):
+                for detail in result["details"]:
+                    print(f"FAILED: {detail.get('file', 'unknown')} – {detail.get('code', 'unknown')}: {detail.get('message', 'Upload rejected')}")
+            else:
+                print(f"HTTP {error.code}: {body}")
+        except (ValueError, AttributeError):
+            print(f"HTTP {error.code}: {body}")
+        print("Summary: upload rejected")
         return 1
     except urllib.error.URLError as error:
         print(f"Could not reach upload endpoint: {error}")

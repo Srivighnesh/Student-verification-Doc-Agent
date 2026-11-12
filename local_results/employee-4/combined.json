@@ -1,0 +1,116 @@
+{
+  "employee_id": "employee-4",
+  "documents": {
+    "baseline": {
+      "id": {
+        "source_container": "processing-staging",
+        "source_file": "Driving-Licence.webp.base64.txt",
+        "file_name": "Driving-Licence.webp.base64.txt",
+        "document_type": "Driving Licence",
+        "fields": {
+          "Address": {
+            "value": "18 SALT LAKE, KOLKATA, WEST BENGAL 700091",
+            "confidence": 0.55
+          },
+          "DateOfBirth": {
+            "value": "15-08-1994",
+            "confidence": 0.834
+          },
+          "DateOfExpiration": {
+            "value": "14-08-2044",
+            "confidence": 0.747
+          },
+          "DocumentNumber": {
+            "value": "WB23 20260001234",
+            "confidence": 0.698
+          },
+          "FirstName": {
+            "value": "RAHUL",
+            "confidence": 0.724
+          },
+          "LastName": {
+            "value": "KUMAR",
+            "confidence": 0.767
+          }
+        }
+      },
+      "id_2": {
+        "source_container": "processing-staging",
+        "source_file": "emp002adhar.jpeg.base64.txt",
+        "file_name": "emp002adhar.jpeg.base64.txt",
+        "document_type": "Aadhaar Card",
+        "fields": {
+          "Address": {
+            "value": "ADARSH NAGAR,\nSAGARPALI, Sagarpali,\n277506\nSagarpali, Ballia, Uttar\nPradesh, 277506",
+            "confidence": 0.471
+          },
+          "DateOfBirth": {
+            "value": "03/01/1995",
+            "confidence": 0.776
+          },
+          "DocumentNumber": {
+            "value": "5522 6616 4533",
+            "confidence": 0.484
+          },
+          "FirstName": {
+            "value": "Roshan",
+            "confidence": 0.739
+          },
+          "LastName": {
+            "value": "Pandey",
+            "confidence": 0.671
+          }
+        }
+      }
+    },
+    "verification": {
+      "id": {
+        "source_container": "processing-staging",
+        "source_file": "emp002adhar.jpeg.base64.txt",
+        "file_name": "emp002adhar.jpeg.base64.txt",
+        "document_type": "Aadhaar Card",
+        "fields": {
+          "Address": {
+            "value": "ADARSH NAGAR,\nSAGARPALI, Sagarpali,\n277506\nSagarpali, Ballia, Uttar\nPradesh, 277506",
+            "confidence": 0.471
+          },
+          "DateOfBirth": {
+            "value": "03/01/1995",
+            "confidence": 0.776
+          },
+          "DocumentNumber": {
+            "value": "5522 6616 4533",
+            "confidence": 0.484
+          },
+          "FirstName": {
+            "value": "Roshan",
+            "confidence": 0.739
+          },
+          "LastName": {
+            "value": "Pandey",
+            "confidence": 0.671
+          }
+        }
+      }
+    }
+  },
+  "last_run_ids": {
+    "baseline": "b6d187168db3481188a3c66770783b23",
+    "verification": "b2ed271cb7e44a009ad90116398725c0"
+  },
+  "errors": {
+    "baseline": [],
+    "verification": [
+      {
+        "run_id": "b2ed271cb7e44a009ad90116398725c0",
+        "file": "Blankocrtest.pdf.base64.txt",
+        "error_code": "blank_document",
+        "error": "Document contains no readable content."
+      }
+    ]
+  },
+  "source_containers": {
+    "baseline": "processing-staging",
+    "verification": "processing-staging"
+  }
+}

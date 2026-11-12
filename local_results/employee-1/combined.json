@@ -1,10 +1,12 @@
 {
-  "employee_id": "emp123",
+  "employee_id": "employee-1",
   "documents": {
     "baseline": {
       "id": {
-        "source_container": "prev",
-        "source_file": "emp123/auto/AdharCard_b64.txt",
+        "source_container": "processing-staging",
+        "source_file": "AdharCard_b64.txt",
+        "file_name": "AdharCard_b64.txt",
+        "document_type": "PAN Card",
         "fields": {
           "DateOfBirth": {
             "value": "05/07/2008",
@@ -25,8 +27,10 @@
         }
       },
       "id_2": {
-        "source_container": "prev",
-        "source_file": "emp123/auto/Pancard_b64.txt",
+        "source_container": "processing-staging",
+        "source_file": "Pancard_b64.txt",
+        "file_name": "Pancard_b64.txt",
+        "document_type": "Aadhaar Card",
         "fields": {
           "Address": {
             "value": "D/O Roop Nagar, naharganj mohalla, .,\nKumher, Bharatpur,\nRajasthan - 321201",
@@ -53,8 +57,10 @@
     },
     "verification": {
       "id": {
-        "source_container": "to-verify",
-        "source_file": "emp123/auto/AdharCard_b64.txt",
+        "source_container": "processing-staging",
+        "source_file": "AdharCard_b64.txt",
+        "file_name": "AdharCard_b64.txt",
+        "document_type": "PAN Card",
         "fields": {
           "DateOfBirth": {
             "value": "05/07/2008",
@@ -73,45 +79,19 @@
             "confidence": 0.794
           }
         }
-      },
-      "id_2": {
-        "source_container": "to-verify",
-        "source_file": "emp123/auto/Pancard_b64.txt",
-        "fields": {
-          "Address": {
-            "value": "D/O Roop Nagar, naharganj mohalla, .,\nKumher, Bharatpur,\nRajasthan - 321201",
-            "confidence": 0.303
-          },
-          "DateOfBirth": {
-            "value": "08/01/2002",
-            "confidence": 0.729
-          },
-          "DocumentNumber": {
-            "value": "9522 4107 1384",
-            "confidence": 0.701
-          },
-          "FirstName": {
-            "value": "Teena",
-            "confidence": 0.696
-          },
-          "LastName": {
-            "value": "Nagar",
-            "confidence": 0.682
-          }
-        }
       }
     }
   },
   "last_run_ids": {
-    "baseline": "cb9d1c3659b94debbb2c454dfdecd69e",
-    "verification": "cb9d1c3659b94debbb2c454dfdecd69e"
+    "baseline": "ea38390c1f374b3d91ba77c2c7759053",
+    "verification": "29445cf2ac234fc3a80c6fbbad0b13d5"
   },
   "errors": {
     "baseline": [],
     "verification": []
   },
   "source_containers": {
-    "baseline": "prev",
-    "verification": "to-verify"
+    "baseline": "processing-staging",
+    "verification": "processing-staging"
   }
 }

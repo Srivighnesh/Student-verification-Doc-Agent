@@ -3,8 +3,10 @@
   "documents": {
     "baseline": {
       "id": {
-        "source_container": "prev",
-        "source_file": "employee-2/auto/emp002adhar.jpeg.base64.txt",
+        "source_container": "processing-staging",
+        "source_file": "emp002adhar.jpeg.base64.txt",
+        "file_name": "emp002adhar.jpeg.base64.txt",
+        "document_type": "Aadhaar Card",
         "fields": {
           "Address": {
             "value": "ADARSH NAGAR,\nSAGARPALI, Sagarpali,\n277506\nSagarpali, Ballia, Uttar\nPradesh, 277506",
@@ -31,8 +33,10 @@
     },
     "verification": {
       "id": {
-        "source_container": "to-verify",
-        "source_file": "employee-2/auto/emp002adhar.jpeg.base64.txt",
+        "source_container": "processing-staging",
+        "source_file": "emp002adhar.jpeg.base64.txt",
+        "file_name": "emp002adhar.jpeg.base64.txt",
+        "document_type": "Aadhaar Card",
         "fields": {
           "Address": {
             "value": "ADARSH NAGAR,\nSAGARPALI, Sagarpali,\n277506\nSagarpali, Ballia, Uttar\nPradesh, 277506",
@@ -59,15 +63,15 @@
     }
   },
   "last_run_ids": {
-    "baseline": "e861cd0c7a31490595305be519f72224",
-    "verification": "e861cd0c7a31490595305be519f72224"
+    "baseline": "9f957578b1ed480dad13eecca9aba794",
+    "verification": "ea790292dfcd4b42a798501ac6368898"
   },
   "errors": {
     "baseline": [],
     "verification": []
   },
   "source_containers": {
-    "baseline": "prev",
-    "verification": "to-verify"
+    "baseline": "processing-staging",
+    "verification": "processing-staging"
   }
 }

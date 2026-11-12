@@ -1,0 +1,29 @@
+DOCUMENTS REVIEWED
+- Driving Licence; Driving-Licence.webp.base64.txt
+- Aadhaar Card; emp002adhar.jpeg.base64.txt
+
+MATCHES
+- Aadhaar Card; emp002adhar.jpeg.base64.txt (previous ↔ new)
+  - DocumentNumber: 5522 6616 4533 (low confidence)
+  - FirstName: Roshan
+  - LastName: Pandey
+  - DateOfBirth: 03/01/1995
+  - Address: ADARSH NAGAR, SAGARPALI, Sagarpali, 277506 Sagarpali, Ballia, Uttar Pradesh, 277506 (low confidence)
+
+DISCREPANCIES
+- Possible identity conflict in previous documents:
+  - Driving Licence; Driving-Licence.webp.base64.txt → FirstName: RAHUL, LastName: KUMAR, DateOfBirth: 15-08-1994
+  - Aadhaar Card; emp002adhar.jpeg.base64.txt → FirstName: Roshan, LastName: Pandey, DateOfBirth: 03/01/1995
+
+MISSING ITEMS
+- No new counterpart for previous Driving Licence; Driving-Licence.webp.base64.txt
+
+UNPROCESSABLE FILES
+- Blankocrtest.pdf.base64.txt (verification): Document contains no readable content.
+
+SUMMARY
+Documents compared: 1
+Fields matched: 5
+Mismatches: 0
+Missing items: 1
+Verdict: Needs review

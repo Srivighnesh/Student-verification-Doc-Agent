@@ -1,4 +1,3 @@
-import base64
 import os
 import re
 from typing import Literal
@@ -25,7 +24,9 @@ class UploadFile(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     file_name: str = Field(strict=True, min_length=1, max_length=255)
-    file_base64: str = Field(strict=True, min_length=4)
+    # Empty Base64 is allowed so a zero-byte file can reach the worker and be
+    # reported as empty_file instead of being rejected as a request-shape error.
+    file_base64: str = Field(strict=True)
     doc_type: Literal["auto", "id", "invoice", "ssc_memo"] = "auto"
 
     @field_validator("file_name")
@@ -40,12 +41,29 @@ class UploadFile(BaseModel):
     @field_validator("file_base64")
     @classmethod
     def validate_file_base64(cls, value: str) -> str:
-        try:
-            decoded = base64.b64decode(value, validate=True)
-        except (ValueError, base64.binascii.Error) as error:
-            raise ValueError("must contain valid Base64 file bytes") from error
-        if not decoded:
-            raise ValueError("must not decode to an empty file")
+        # Check transport Base64 syntax before the API decodes it into staging.
+        pattern = r"(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?"
+        if not re.fullmatch(pattern, value):
+            raise ValueError("must contain valid Base64 file bytes")
+        return value
+
+
+class SkippedUploadFile(BaseModel):
+    """Client-side validation result; the server supplies the display message."""
+    model_config = ConfigDict(extra="forbid")
+
+    file_name: str = Field(strict=True, min_length=1, max_length=255)
+    error_code: Literal[
+        "empty_file", "invalid_base64", "unsupported_file_type",
+        "corrupt_image", "corrupt_pdf", "password_protected_pdf",
+        "blank_document", "file_too_large",
+    ]
+
+    @field_validator("file_name")
+    @classmethod
+    def validate_skipped_file_name(cls, value: str) -> str:
+        if value in {".", ".."} or "/" in value or "\\" in value:
+            raise ValueError("must be a file name, not a path")
         return value
 
 
@@ -60,6 +78,20 @@ class UploadRequest(BaseModel):
     )
     kind: Literal["baseline", "verification"] = "verification"
     files: list[UploadFile] = Field(min_length=1)
+    skipped_files: list[SkippedUploadFile] = Field(default_factory=list)
+
+
+class SkippedFileMessage(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+
+    file: StrictStr
+    kind: Literal["baseline", "verification"]
+    error_code: Literal[
+        "empty_file", "invalid_base64", "unsupported_file_type",
+        "corrupt_image", "corrupt_pdf", "password_protected_pdf",
+        "blank_document", "file_too_large",
+    ]
+    message: StrictStr
 
 
 class ProcessingMessage(BaseModel):
@@ -74,6 +106,7 @@ class ProcessingMessage(BaseModel):
     run_id: str | None = Field(default=None, strict=True)
     kind: Literal["baseline", "verification"] = "verification"
     files: list[StrictStr] = Field(default_factory=list)
+    skipped_files: list[SkippedFileMessage] = Field(default_factory=list)
 
     @field_validator("run_id")
     @classmethod
